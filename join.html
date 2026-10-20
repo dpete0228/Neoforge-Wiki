@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Join - Superhero Mod Wiki</title>
+<style>
+:root{--bg:#f6f7fb;--panel:#fff;--ink:#1b1f2a;--mute:#5f6678;--line:#dfe3ee;--acc:#d4202c;--acc2:#1f4fd8;--chip:#eef1f8}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#10131b;--panel:#181c27;--ink:#e8eaf2;--mute:#9aa1b5;--line:#2a3042;--acc:#ff4b57;--acc2:#6f94ff;--chip:#222839}}
+:root[data-theme=dark]{--bg:#10131b;--panel:#181c27;--ink:#e8eaf2;--mute:#9aa1b5;--line:#2a3042;--acc:#ff4b57;--acc2:#6f94ff;--chip:#222839}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;padding:10px 16px}
+.brand{font-weight:800;letter-spacing:.2px;color:var(--ink)}.brand b{color:var(--acc)}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+h1{margin:0 0 4px;font-size:28px}h2{margin:28px 0 10px;font-size:20px}h3{margin:18px 0 6px;font-size:16px}
+.lead{color:var(--mute);margin:0 0 18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:0 0 14px}
+ol.steps{padding-left:20px}ol.steps li{margin:6px 0}
+kbd,code{border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 6px;background:var(--chip);font-size:13px;font-family:ui-monospace,Consolas,monospace}
+pre{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto}
+pre code{border:none;background:none;padding:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs a{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink);font-size:14px}
+.tabs a:hover{border-color:var(--acc2);text-decoration:none}
+.warn{border-left:3px solid var(--acc);padding-left:10px;color:var(--mute)}
+.crumbs{font-size:14px;color:var(--mute);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header>
+  <span class="brand"><b>Superhero Mod</b> Wiki</span>
+  <a href="index.html">&larr; Back to wiki</a>
+</header>
+<main>
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; How to Join</div>
+  <h1>How to Join the Server</h1>
+  <p class="lead">Everything you need to connect to the Superhero Mod server, split by platform. You need a Microsoft account (the server runs with online-mode on) and you must be whitelisted before you try to join - ask the host to run <code>whitelist add YourUsername</code> first.</p>
+
+  <div class="panel">
+    <strong>Server version:</strong> NeoForge <code>26.3.0.90</code> for Minecraft <code>26.3</code><br>
+    <strong>Mod file:</strong> <code>superheromod-0.0.2.jar</code> (ask the host for the download link)<br>
+    <strong>Server address:</strong> <code>&lt;your-playit-address&gt;.playit.gg</code> (ask the host for this)
+  </div>
+
+  <div class="tabs">
+    <a href="#windows">Windows</a>
+    <a href="#steamdeck">Steam Deck</a>
+  </div>
+
+  <h2 id="windows">Windows</h2>
+  <ol class="steps">
+    <li>Install the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">official Minecraft Launcher</a> if you don't already have it, and sign in with your Microsoft account.</li>
+    <li>Download the NeoForge installer for <code>26.3.0.90</code> from the <a href="https://projects.neoforged.net/neoforged/neoforge" target="_blank" rel="noopener">NeoForge downloads page</a> - grab the <code>.jar</code> installer, matching Minecraft <code>26.3</code>.</li>
+    <li>Run the installer (double-click it; Windows bundles a JRE capable of running it since the Minecraft Launcher already needs Java). Choose <strong>"Install client"</strong> and leave the default install location.</li>
+    <li>Open the Minecraft Launcher - a new installation named something like <code>neoforge-26.3.0.90</code> will appear.</li>
+    <li>Get <code>superheromod-0.0.2.jar</code> from the host and copy it into:
+      <pre><code>%appdata%\.minecraft\mods</code></pre>
+      (paste that path into File Explorer's address bar; create the <code>mods</code> folder if it's missing, or launch the NeoForge profile once first so the launcher creates it for you.)
+    </li>
+    <li>Launch the <code>neoforge-26.3.0.90</code> profile from the Minecraft Launcher.</li>
+    <li>In-game: <strong>Multiplayer &rarr; Add Server</strong>, paste the playit.gg address, and join.</li>
+  </ol>
+  <p class="warn">If NeoForge fails to install, make sure Windows has a recent Java runtime - the Minecraft Launcher normally handles this itself, but if you see a Java-version error, install a <a href="https://adoptium.net/temurin/releases/?version=25" target="_blank" rel="noopener">Temurin JDK 25</a> build and re-run the installer.</p>
+
+  <h2 id="steamdeck">Steam Deck</h2>
+  <p>Assumes nothing is installed except the vanilla Minecraft Flatpak.</p>
+  <ol class="steps">
+    <li>Switch to <strong>Desktop Mode</strong> (hold the Power button &rarr; Switch to Desktop).</li>
+    <li>Open <strong>Konsole</strong> and find the Flatpak's data folder:
+      <pre><code>flatpak list --app | grep -i minecraft</code></pre>
+      Note the app ID it prints (e.g. <code>com.mojang.Minecraft</code>). Its data lives at <code>~/.var/app/&lt;that-id&gt;/.minecraft</code>.
+    </li>
+    <li>Install Java 25 with SDKMAN (no root needed):
+      <pre><code>curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java 25-tem</code></pre>
+      Close and reopen Konsole afterwards so <code>java</code> is on your <code>PATH</code>.
+    </li>
+    <li>Download the NeoForge installer for <code>26.3.0.90</code> from the <a href="https://projects.neoforged.net/neoforged/neoforge" target="_blank" rel="noopener">NeoForge downloads page</a>, saved to <code>~/Downloads</code>.</li>
+    <li>Run it, pointing the install location at the Flatpak's folder instead of the default:
+      <pre><code>java -jar ~/Downloads/neoforge-26.3.0.90-installer.jar</code></pre>
+      Choose <strong>"Install client"</strong> and change the destination to <code>~/.var/app/&lt;that-id&gt;/.minecraft</code>.
+    </li>
+    <li>Add the mod jar:
+      <pre><code>mkdir -p ~/.var/app/&lt;that-id&gt;/.minecraft/mods
+cp ~/Downloads/superheromod-0.0.2.jar ~/.var/app/&lt;that-id&gt;/.minecraft/mods/</code></pre>
+    </li>
+    <li>Open the Flatpak Minecraft Launcher, pick the new <code>26.3.0.90</code> profile, sign in with your Microsoft account.</li>
+    <li>Multiplayer &rarr; Add Server &rarr; paste the playit.gg address, join.</li>
+  </ol>
+
+</main>
+</body>
+</html>
